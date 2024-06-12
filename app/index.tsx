@@ -126,6 +126,7 @@ export default function App() {
             title={"Ler outro QR-Code"}
             onPress={() => {
               setOptions(1);
+              setScanned(false);
             }}
           />
         </View>
@@ -138,7 +139,10 @@ export default function App() {
           <View style={enter.container}>
             <Button
               title={"Clique aqui para realizar uma nova compra!"}
-              onPress={() => setOptions(1)}
+              onPress={() => {
+                setOptions(1);
+                setScanned(false);
+              }}
             />
           </View>
         </SafeAreaView>
